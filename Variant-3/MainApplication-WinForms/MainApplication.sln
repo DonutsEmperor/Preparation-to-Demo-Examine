@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainApplication", "MainApplication.csproj", "{F4659003-DD6C-4491-8B50-47FD934C2C08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "..\UnitTests-MSTest\UnitTests.csproj", "{F38D730C-6F45-413A-BD0B-CF73DEFEED29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A25CD2C8-461F-416E-A703-CC35141BB347}"
+	ProjectSection(SolutionItems) = preProject
+		..\Import-ExcelTables\Petshop_import - Бренд.csv = ..\Import-ExcelTables\Petshop_import - Бренд.csv
+		..\Import-ExcelTables\Petshop_import - Животное.csv = ..\Import-ExcelTables\Petshop_import - Животное.csv
+		..\Import-ExcelTables\Petshop_import - Заказ.csv = ..\Import-ExcelTables\Petshop_import - Заказ.csv
+		..\Import-ExcelTables\Petshop_import - Категория.csv = ..\Import-ExcelTables\Petshop_import - Категория.csv
+		..\Import-ExcelTables\Petshop_import - Клиент.csv = ..\Import-ExcelTables\Petshop_import - Клиент.csv
+		..\Import-ExcelTables\Petshop_import - Любимое.csv = ..\Import-ExcelTables\Petshop_import - Любимое.csv
+		..\Import-ExcelTables\Petshop_import - Состав.csv = ..\Import-ExcelTables\Petshop_import - Состав.csv
+		..\Import-ExcelTables\Petshop_import - Товар.csv = ..\Import-ExcelTables\Petshop_import - Товар.csv
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4659003-DD6C-4491-8B50-47FD934C2C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4659003-DD6C-4491-8B50-47FD934C2C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4659003-DD6C-4491-8B50-47FD934C2C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4659003-DD6C-4491-8B50-47FD934C2C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F38D730C-6F45-413A-BD0B-CF73DEFEED29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F38D730C-6F45-413A-BD0B-CF73DEFEED29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F38D730C-6F45-413A-BD0B-CF73DEFEED29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F38D730C-6F45-413A-BD0B-CF73DEFEED29}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5560F69C-6458-4A7D-B723-0BBD5BC32776}
+	EndGlobalSection
+EndGlobal
