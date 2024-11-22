@@ -5,14 +5,36 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace MainApplication.Forms
 {
-	public partial class Registration : Form
+	public partial class Options : Form
 	{
 		private readonly IServiceProvider _provider;
+		private readonly IDbWorker _db;
 
-		public Registration(IServiceProvider provider)
+		public Options(IServiceProvider provider, IDbWorker db)
 		{
 			_provider = provider;
+			_db = db;
+
 			InitializeComponent();
+
+			var list = _db.Orders.
+				Where(o => o.Client.ClientId.
+					Equals(GlobalStorage.CurrentUser.ClientId)).ToList();
+
+			dgvOrders.DataSource = list;
+			dgvOrders.ReadOnly = true;
+			PasteTheInfo();
+
+		}
+
+		private void PasteTheInfo()
+		{
+			var user = GlobalStorage.CurrentUser;
+			tbLogin.Text = user.Login;
+			tbName.Text = user.Name;
+			tbPhone.Text = user.Phone;
+			tbAddress.Text = user.Address;
+			tbPassword.Text = "Enter new password";
 		}
 
 		private void BtnEnter_Click(object sender, EventArgs e)
@@ -30,7 +52,7 @@ namespace MainApplication.Forms
 					Password = tbPassword.Text
 				};
 
-				bool code = MyRealFunctions.AddClient(clientInfo);
+				bool code = MyRealFunctions.UpdateClient(clientInfo);
 				if (code is not true)
 				{
 					lblStatus.Text = "Anything has gone wrong!";

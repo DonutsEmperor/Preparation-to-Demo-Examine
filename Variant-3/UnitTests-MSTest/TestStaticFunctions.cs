@@ -1,9 +1,11 @@
 ﻿using MainApplication.Database.Models;
 using System.Net;
 using System.Xml.Linq;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace UnitTests
 {
+	// FIRST ATTEMPT TO WRITE SOME MSTEST-UNITTESTS
 	[TestClass]
 	public sealed class TestClass_StaticFictive_Functions
 	{
@@ -95,6 +97,35 @@ namespace UnitTests
 				MyRealFunctions.FindClient(field);
 
 			Assert.IsNotNull(client);
+		}
+
+		[TestMethod]
+		[DataRow("PolovyhNB", "zfl-caBp9r93424th-2", "Nikita Polovykh", "890", "anythere")]
+		public void TestMethod_UpdateClient(string login, string password,
+				string fullname, string phone, string address)
+		{
+			Client? client = MainApplication.MyFunctions.
+				MyRealFunctions.FindClient(login);
+
+			Assert.IsNotNull(client);
+
+			client.Login = login;
+			client.Name = fullname;
+			client.Address = address;
+			client.Password = password;
+			client.Phone = phone;
+
+			bool result = MainApplication.MyFunctions.
+				MyRealFunctions.UpdateClient(client);
+
+			Assert.AreEqual(result, true);
+
+			Client? updated = MainApplication.MyFunctions.
+				MyRealFunctions.FindClient(login);
+
+			Assert.IsNotNull(updated);
+
+			Assert.AreEqual(client, updated); // bad comparison: debug said what they are same
 		}
 	}
 }

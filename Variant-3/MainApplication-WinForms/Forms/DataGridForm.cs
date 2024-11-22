@@ -11,6 +11,8 @@ using System.Windows.Forms;
 
 namespace MainApplication
 {
+	// JUST CODE FOR FUN
+
 	public partial class DataGridForm : Form
 	{
 		private readonly IServiceProvider _provider;

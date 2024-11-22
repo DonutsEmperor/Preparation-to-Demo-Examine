@@ -36,7 +36,6 @@
 			tbLogin = new TextBox();
 			lblStatus = new Label();
 			BtnEnter = new Button();
-			btnRegistration = new Button();
 			SuspendLayout();
 			// 
 			// label4
@@ -99,11 +98,12 @@
 			// 
 			lblStatus.AutoSize = true;
 			lblStatus.Font = new Font("Consolas", 12F);
-			lblStatus.Location = new Point(363, 312);
+			lblStatus.Location = new Point(6, 422);
 			lblStatus.Name = "lblStatus";
 			lblStatus.Size = new Size(63, 19);
 			lblStatus.TabIndex = 16;
 			lblStatus.Text = "Status";
+			lblStatus.TextAlign = ContentAlignment.MiddleCenter;
 			// 
 			// BtnEnter
 			// 
@@ -116,23 +116,11 @@
 			BtnEnter.UseVisualStyleBackColor = true;
 			BtnEnter.Click += BtnEnter_Click;
 			// 
-			// btnRegistration
-			// 
-			btnRegistration.Font = new Font("Consolas", 12F);
-			btnRegistration.Location = new Point(650, 405);
-			btnRegistration.Name = "btnRegistration";
-			btnRegistration.Size = new Size(138, 33);
-			btnRegistration.TabIndex = 23;
-			btnRegistration.Text = "Registration";
-			btnRegistration.UseVisualStyleBackColor = true;
-			btnRegistration.Click += btnRegistration_Click;
-			// 
 			// Authorization
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
-			Controls.Add(btnRegistration);
 			Controls.Add(label4);
 			Controls.Add(label3);
 			Controls.Add(label2);
@@ -157,6 +145,5 @@
 		private TextBox tbLogin;
 		private Label lblStatus;
 		private Button BtnEnter;
-		private Button btnRegistration;
 	}
 }

@@ -28,15 +28,12 @@ namespace MainApplication
 					return;
 				}
 
-				var next = _provider.GetService<DataGridForm>()!;
-				next.ShowDialog();
-			}
-		}
+				GlobalStorage.CurrentUser = MyFunctions.MyRealFunctions.FindClient(tbLogin.Text!)!;
+				var next = _provider.GetService<MainWindow>()!;
+				next.ChangeVisibility();
 
-		private void btnRegistration_Click(object sender, EventArgs e)
-		{
-			var next = _provider.GetService<Registration>()!;
-			next.ShowDialog();
+				this.Hide(); this.Close();
+			}
 		}
 	}
 }
